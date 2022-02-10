@@ -49,7 +49,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 var playerSelection = "rock";
-var computerSelection = computerPlay();
 //console.log(playRound(playerSelection, computerSelection));
 
 function game() {
@@ -57,6 +56,7 @@ function game() {
         // your code here!
         playerSelection = window.prompt("Rock, Paper or Scissors?", "What you got?");
         
+        var computerSelection = computerPlay();
         //if (playerSelection != ("rock" || "paper" || "scissors")) {
         //    alert("Please enter rock, paper or scissors only! This is your last warning!!");
         //    i--
@@ -64,7 +64,8 @@ function game() {
         //        i = 0
         //    }
         //}
-        console.log(playRound (playerSelection, computerSelection));
+        results = playRound (playerSelection, computerSelection)
+        console.log(results)
     }
     
 }
